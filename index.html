@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       tailwind.config = {
         theme: {
@@ -24,79 +27,106 @@
       }
     </style>
     <script>
-        const canvas = document.querySelector("#arunjacobcanvas")
-const ctx = canvas.getContext("2d")
+      var container = document.getElementById("can");
+      var canvas = document.createElement("canvas");
+      canvas.id = "canvas";
+      container.append(canvas);
+
+      var ctx = canvas.getContext("2d");
+
+      ctx.strokeStyle = "rgba(242, 144, 7, 1)";
+      ctx.fillStyle = "rgba(242, 144, 7, 1)";
+      ctx.rect(0, 0, 50, 50);
+      ctx.stroke();
     </script>
   </head>
   <body>
-    <div class="flex flex-col md:flex-row bg-white h-screen w-screen p-10 gap-6">
-        <canvas id="arunjacobcanvas" class="w-full md:w-1/2 border"></canvas>
-        <div class="flex flex-wrap gap-6 border w-full md:w-1/2 items-center justify-center"> <!-- tile -->
+    <div
+      class="flex flex-col md:flex-row bg-white h-screen w-screen p-10 gap-6"
+    >
+      <canvas id="can" class="w-full md:w-1/2 border"></canvas>
       <div
-        class="flex flex-col border border-gray-300 border-t-red-600 border-t-4 w-full w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
+        class="flex flex-wrap gap-6 border w-full md:w-1/2 items-center justify-center"
       >
-        <h1 class="text-black font-bold w-full">Personal Website</h1>
-        <p class="text-gray-500 h-40 overflow-scroll w-full">
-           Here, I share my unique perspective on life, passions, and everyday experiences. 
-           Join me as I navigate the ups and downs, express my thoughts, and celebrate the beauty of the ordinary. 
-           Let's connect and find common ground in our shared human journey</p>
+        <!-- tile -->
         <div
-          class="bg-white text-red-600 font-bold w-full "
+          class="flex flex-col border border-gray-300 border-t-red-600 border-t-4 w-full w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
         >
-          <a href="https://www.arunjacob.com/" target="_blank" class="border border-red-600 hover:bg-red-100 p-2">arunjacob.com</a>
-        </d>
-      </div>
-    </div>
-
-      <!-- tile -->
-      <div
-        class="flex flex-col border border-gray-300 border-t-green-600 border-t-4 w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
-      >
-        <h1 class="text-black font-bold w-full">Portfolio</h1>
-        <p class="text-gray-500 h-40 overflow-scroll w-full">
-          Explore my work and discover how I can bring your ideas to life.
-        </p>
-        <div
-          class="bg-white text-green-600 font-bold w-full"
-        >
-          <a href="https://www.arunjacob.dev/" target="_blank" class="border border-green-600 hover:bg-blue-100 p-2">arunjacob.dev</a>
-        </d>
-      </div>
-    </div>
-
-     <!-- tile -->
-      <div
-        class="flex flex-col border border-gray-300 border-t-[#0077b5] border-t-4 w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
-      >
-        <h1 class="text-black font-bold w-full">LinkedIn</h1>
-        <p class="text-gray-500 h-40 overflow-scroll w-full">
-          With a passion for technology and a drive to stay at the forefront of industry trends, I continuously seek opportunities to enhance my skills and deliver high-quality solutions.
-        </p>
-        <div
-          class="bg-white text-[#0077b5] font-bold w-full"
-        >
-          <a href="https://www.linkedin.com/in/ajacin/" target="_blank" class="border border-[#0077b5] hover:bg-blue-100 p-2">go to LinkedIn</a>
-        </d>
-      </div>
-    </div>
-
-    <!-- tile -->
-      <div
-        class="flex flex-col border border-gray-300 border-t-[#c13584] border-t-4 w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
-      >
-        <h1 class="text-black font-bold w-full">Instagram</h1>
-        <p class="text-gray-500 h-40 overflow-scroll w-full">
-          A glimpse into my world of creativity and inspiration. Join me as I capture and share moments that celebrate beauty, art, and the simple joys of life. Let's connect and explore the visual stories. 
-        </p>
-        <div
-          class="bg-white text-[#c13584] font-bold w-full"
-        >
-          <a href="https://www.instagram.com/ajacin/" target="_blank" class="border border-[#c13584] hover:bg-blue-100 p-2">go to Instagram</a>
-        </d>
-      </div>
-    </div>
+          <h1 class="text-black font-bold w-full">Personal Website</h1>
+          <p class="text-gray-500 h-40 overflow-scroll w-full">
+            Here, I share my unique perspective on life, passions, and everyday
+            experiences. Join me as I navigate the ups and downs, express my
+            thoughts, and celebrate the beauty of the ordinary. Let's connect
+            and find common ground in our shared human journey
+          </p>
+          <div class="bg-white text-red-600 font-bold w-full">
+            <a
+              href="https://www.arunjacob.com/"
+              target="_blank"
+              class="border border-red-600 hover:bg-red-100 p-2"
+              >arunjacob.com</a
+            >
+          </div>
         </div>
-       
 
+        <!-- tile -->
+        <div
+          class="flex flex-col border border-gray-300 border-t-green-600 border-t-4 w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
+        >
+          <h1 class="text-black font-bold w-full">Portfolio</h1>
+          <p class="text-gray-500 h-40 overflow-scroll w-full">
+            Explore my work and discover how I can bring your ideas to life.
+          </p>
+          <div class="bg-white text-green-600 font-bold w-full">
+            <a
+              href="https://www.arunjacob.dev/"
+              target="_blank"
+              class="border border-green-600 hover:bg-blue-100 p-2"
+              >arunjacob.dev</a
+            >
+          </div>
+        </div>
+
+        <!-- tile -->
+        <div
+          class="flex flex-col border border-gray-300 border-t-[#0077b5] border-t-4 w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
+        >
+          <h1 class="text-black font-bold w-full">LinkedIn</h1>
+          <p class="text-gray-500 h-40 overflow-scroll w-full">
+            With a passion for technology and a drive to stay at the forefront
+            of industry trends, I continuously seek opportunities to enhance my
+            skills and deliver high-quality solutions.
+          </p>
+          <div class="bg-white text-[#0077b5] font-bold w-full">
+            <a
+              href="https://www.linkedin.com/in/ajacin/"
+              target="_blank"
+              class="border border-[#0077b5] hover:bg-blue-100 p-2"
+              >go to LinkedIn</a
+            >
+          </div>
+        </div>
+
+        <!-- tile -->
+        <div
+          class="flex flex-col border border-gray-300 border-t-[#c13584] border-t-4 w-full md:w-64 h-72 items-center p-4 hover:shadow hover:shadow-xl gap-5"
+        >
+          <h1 class="text-black font-bold w-full">Instagram</h1>
+          <p class="text-gray-500 h-40 overflow-scroll w-full">
+            A glimpse into my world of creativity and inspiration. Join me as I
+            capture and share moments that celebrate beauty, art, and the simple
+            joys of life. Let's connect and explore the visual stories.
+          </p>
+          <div class="bg-white text-[#c13584] font-bold w-full">
+            <a
+              href="https://www.instagram.com/ajacin/"
+              target="_blank"
+              class="border border-[#c13584] hover:bg-blue-100 p-2"
+              >go to Instagram</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
