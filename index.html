@@ -1,68 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Navbar</title>
-    <!-- Include the Tailwind CSS CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-gray-800 text-white py-4">
-      <div class="container mx-auto flex items-center justify-between">
-        <a href="#" class="font-semibold text-xl">ARUN JACOB</a>
-        <!-- Mobile Menu -->
-        <div class="md:hidden">
-          <button
-            type="button"
-            class="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
-            aria-label="Toggle menu"
-          >
-            <svg viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6">
-              <path
-                fill-rule="evenodd"
-                d="M2 4.75C2 4.33579 2.33579 4 2.75 4H17.25C17.6642 4 18 4.33579 18 4.75C18 5.16421 17.6642 5.5 17.25 5.5H2.75C2.33579 5.5 2 5.16421 2 4.75ZM2.75 8C2.33579 8 2 8.33579 2 8.75C2 9.16421 2.33579 9.5 2.75 9.5H17.25C17.6642 9.5 18 9.16421 18 8.75C18 8.33579 17.6642 8 17.25 8H2.75ZM17.25 11.5H2.75C2.33579 11.5 2 11.8358 2 12.25C2 12.6642 2.33579 13 2.75 13H17.25C17.6642 13 18 12.6642 18 12.25C18 11.8358 17.6642 11.5 17.25 11.5ZM2.75 15C2.33579 15 2 15.3358 2 15.75C2 16.1642 2.33579 16.5 2.75 16.5H17.25C17.6642 16.5 18 16.1642 18 15.75C18 15.3358 17.6642 15 17.25 15H2.75Z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-4">
-          <a href="#" class="hover:text-gray-300">Home</a>
-          <a href="#" class="hover:text-gray-300">About</a>
-          <a href="#" class="hover:text-gray-300">Projects</a>
-          <a href="#" class="hover:text-gray-300">Contact</a>
-        </div>
-      </div>
-      <!-- Mobile Menu Dropdown -->
-      <div class="hidden md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#" class="hover:text-gray-300 block">Home</a>
-          <a href="#" class="hover:text-gray-300 block">About</a>
-          <a href="#" class="hover:text-gray-300 block">Projects</a>
-          <a href="#" class="hover:text-gray-300 block">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="container mx-auto py-8 grid">
-      <h1 class="text-3xl font-semibold mb-4">_</h1>
-    </div>
-
-    <!-- Include the JavaScript for the mobile menu functionality -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      const menuButton = document.querySelector(".md\\:hidden");
-      const menuDropdown = document.querySelector(".hidden.md\\:hidden");
-
-      menuButton.addEventListener("click", () => {
-        menuDropdown.classList.toggle("hidden");
-      });
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
     </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col md:flex-row bg-white h-screen w-screen p-10 gap-6">
+        <!-- tile -->
+      <div
+        class="flex flex-col border border-gray-300 border-t-red-600 border-t-4 w-96 h-64 items-center p-6 hover:shadow hover:shadow-xl gap-6"
+      >
+        <h1 class="text-black font-bold w-full">Development</h1>
+        <p class="text-gray-500 h-32 overflow-scroll w-full">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+          adipisci quae a officia velit temporibus animi iure nobis.
+        </p>
+        <div
+          class="bg-white text-red-600 font-bold w-full"
+        >
+          <button>LEARN MORE</button>
+        </d>
+      </div>
+    </div>
+      <!-- tile -->
+      <div
+        class="flex flex-col border border-gray-300 border-t-red-600 border-t-4 w-96 h-64 items-center p-6 hover:shadow hover:shadow-xl gap-6"
+      >
+        <h1 class="text-black font-bold w-full">Development</h1>
+        <p class="text-gray-500 h-32 overflow-scroll w-full">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+          adipisci quae a officia velit temporibus animi iure nobis.
+        </p>
+        <div
+          class="bg-white text-red-600 font-bold w-full"
+        >
+          <button>LEARN MORE</button>
+        </d>
+      </div>
+    </div>
   </body>
 </html>
